@@ -69,7 +69,7 @@ include __DIR__ . '/db.php';
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div>
-                                    <p>Tipo:
+                                    <p>Categoria:
                                         <span class="fw-semibold">
                                             <?php echo $product->cathegory ?>
                                         </span>
