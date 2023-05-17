@@ -8,3 +8,16 @@ nav {
     height: 80px;
     width: 80px;
 }
+
+.card-body {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.fa-solid {
+    font-size: 24px;
+}
+
+.btn i {
+    font-size: 16px;
+}
