@@ -25,13 +25,26 @@ include __DIR__ . '/db.php';
 <body>
 
     <header>
-        <nav class="d-flex align-items-cente justify-content-between shadow px-4 ">
+        <nav class="d-flex align-items-center justify-content-between shadow px-4 ">
             <div class="img-logo">
                 <img class="img-fluid" src="./img/hand-drawn-dog-animal-logo_23-2148910632.avif" alt="logo cane">
 
             </div>
+
+            <h1 class="text-danger fw-bold">Animali che passione!</h1>
+            <div><input type="text" placeholder="Cerca">
+                <button class="btn btn-danger"> Cerca</button>
+            </div>
         </nav>
     </header>
+
+    <main>
+
+
+
+
+    </main>
+
 
 </body>
 
