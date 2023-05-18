@@ -1,11 +1,7 @@
 <?php
-
 include __DIR__ . '/db.php';
-
 //var_dump($products);
 ?>
-
-
 
 <!doctype html>
 <html lang="en">
@@ -75,11 +71,70 @@ include __DIR__ . '/db.php';
                                         </span>
                                     </p>
                                 </div>
-
                                 <div class="d-flex align-items-center">
                                     <p>Prezzo:
                                         <span class="text-danger fw-semibold">
                                             <?php echo $product->price ?> &euro;
+                                        </span>
+                                    </p>
+                                    <button class="btn btn-outline-primary mb-3 mx-2"><i
+                                            class="fa-solid fa-cart-shopping"></i></button>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <?php } ?>
+
+            <?php
+
+            foreach ($foods as $food) {
+                ?>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="card mb-3 shadow position-relative">
+
+                        <div class="card-body d-flex align-items-center justify-content-center m-auto">
+                            <img class="img-fluid" src=" <?php echo $food->image ?>" alt="<?php echo $food->name ?>">
+                        </div>
+                        <div class="card-footer">
+                            <h2 class="text-center text-capitalize mb-4 fw-bold">
+                                <?php echo $food->name ?>
+                                <span class="bol">
+                                    <i class="<?php echo $food->icon; ?>"></i>
+
+                                </span>
+                            </h2>
+                            <div class="d-flex align-items-center">
+                                <p>Questo prodotto è per:</p>
+                                <?php if ($food->animal === 'Cane') { ?>
+                                    <i class="fa-solid fa-dog pb-4 px-2  "></i>
+                                <?php } elseif ($food->animal === 'Gatto') { ?>
+                                    <i class="fa-solid fa-cat pb-4 px-2 "></i>
+                                <?php } else { ?>
+                                    <i class="fa-solid fa-dog pb-4 px-2 "></i>
+                                    <i class="fa-solid fa-cat pb-4 px-2 "></i>
+                                <?php } ?>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p>Categoria:
+                                        <span class="fw-semibold">
+                                            <?php echo $food->cathegory ?>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p>Prezzo:
+                                        <span class="text-danger fw-semibold">
+                                            <?php echo $food->price ?> &euro;
                                         </span>
                                     </p>
                                     <button class="btn btn-outline-primary mb-3 mx-2"><i
